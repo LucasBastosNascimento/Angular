@@ -18,12 +18,21 @@ class Carro {
         return this.velociada
     }
 }
-let carroA = new Carro("Tiguan", 4)
-console.log(carroA)
-carroA.acelerar()
-console.log(carroA)
-carroA.acelerar()
-carroA.acelerar()
-console.log(carroA)
-carroA.parar()
-console.log(carroA)
+
+class Concessionaria{
+    private endereco!: string
+    private listaDECarros!: any
+
+    constructor(endereco: string){
+        this.endereco = endereco;
+    }
+    public fornecerEndereco(): string{
+        return this.endereco
+    }
+
+    public mostrarListaDeCarro(): any{
+        return this.listaDECarros
+    }
+}
+let concessionaria = new Concessionaria('Av do estado');
+console.log(concessionaria)

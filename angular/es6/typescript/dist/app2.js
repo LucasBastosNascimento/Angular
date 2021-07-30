@@ -16,12 +16,17 @@ var Carro = /** @class */ (function () {
     };
     return Carro;
 }());
-var carroA = new Carro("Tiguan", 4);
-console.log(carroA);
-carroA.acelerar();
-console.log(carroA);
-carroA.acelerar();
-carroA.acelerar();
-console.log(carroA);
-carroA.parar();
-console.log(carroA);
+var Concessionaria = /** @class */ (function () {
+    function Concessionaria(endereco) {
+        this.endereco = endereco;
+    }
+    Concessionaria.prototype.fornecerEndereco = function () {
+        return this.endereco;
+    };
+    Concessionaria.prototype.mostrarListaDeCarro = function () {
+        return this.listaDECarros;
+    };
+    return Concessionaria;
+}());
+var concessionaria = new Concessionaria('Av do estado');
+console.log(concessionaria);
