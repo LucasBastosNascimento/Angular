@@ -16,6 +16,8 @@ export class PainelComponent implements OnInit {
 
   public rodadaFrase!: Frase;
 
+  public progresso: number = 0;
+
   constructor() {
     this.rodadaFrase =this.frases[this.rodada]
     console.log(this.frases) 
@@ -34,7 +36,8 @@ export class PainelComponent implements OnInit {
 
       //trocar pergunta da  rodada
       this.rodada++
-
+      this.progresso = this.progresso + (100 / this.frases.length)
+       
       //atualiza o objeto rodadaFrase
       this.rodadaFrase = this.frases[this.rodada]
     }else{
